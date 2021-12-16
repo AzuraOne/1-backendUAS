@@ -44,7 +44,7 @@ Penafsiran dari kode-kode diatas menurut penulis sebagai berikut:
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
