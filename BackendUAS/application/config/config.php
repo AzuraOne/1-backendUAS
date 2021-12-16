@@ -23,7 +23,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = '';
+$config['base_url'] = ((isset($_SERVER['HTTPS'])) && $_SERVER['HTTPS'] == 'on') ? 'https' : 'http';
+$config['base_url'] .= "://".$_SERVER['HTTP_HOST'];
+$config['base_url'] .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
+
+/*
+Penafsiran dari kode-kode diatas menurut penulis sebagai berikut:
+1. Pada kode pertama akan ditanya apakah protokolnya menggunakan http atau https? Jika https maka gunakan https, jika tidak maka gunakan http.
+2. Pada kode kedua, hasil dari kode pertama akan ditempelkan dengan jenis host nya seperti https://http_host atau http://http_host. Http_host itu mirip localhost atau host server seperti Apache, Nginx atau LiteSpeed.
+3. Pada kode ketiga, hasil dari kode pertama dan kedua akan ditempel pada kode ketiga. Seperti https://http_host/script_name atau http://http_host/script_name.
+*/
 
 /*
 |--------------------------------------------------------------------------
