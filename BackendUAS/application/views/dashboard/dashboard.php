@@ -16,26 +16,37 @@
 
 <body>
 
-    <nav class="d-flex justify-content-between bg-warning">
-        <h3 class="fs-1">Pencatatan Uang Mandiri</h3>
+    <nav class="bg-warning p-3">
+        <div class="container d-flex justify-content-between ">
+            <h3 class="fs-4 fw-bold text-center text-wrap text-white" style="width: 6rem;">Pencatatan Uang Mandiri</h3>
 
-        <a href="#" class="nav-link fs-3">ADMIN <i class="fas fa-key"></i></a>
+            <a href="#" class="nav-link fs-2 text-white">ADMIN <i class="fas fa-key"></i></a>
+
+        </div>
+
     </nav>
-    <aside class="d-flex flex-column justify-content-evenly bg-info" style="width: 15%; height: 90vh;">
-        <a href="#">Dashboard</a>
-        <a href="#">Balance</a>
-        <div class="transaksi">
-            <h3>Transaksi</h3>
-            <a href="#">Top Up</a>
-            <a href="#">Pengeluaran</a>
 
-        </div>
-        <div class="report">
-            <h3>Report</h3>
-            <a href="#">Cetak laporan</a>
-        </div>
-    </aside>
+    <div class="content d-flex flex-row">
+        <aside class="d-flex flex-column justify-content-evenly bg-info text-center " style="width: 15%; height: 90vh;">
+            <a href="#" class="text-white nav-link active">Dashboard</a>
+            <a href="#" class="text-white nav-link ">Balance</a>
+            <div class="transaksi">
+                <h3>Transaksi</h3>
+                <a href="#" class="nav-link text-white">Top Up</a>
+                <a href="#" class="nav-link text-white">Pengeluaran</a>
 
+            </div>
+            <div class="report">
+                <h3>Report</h3>
+                <a href="#" class="nav-link text-white">Cetak laporan</a>
+            </div>
+        </aside>
+        <span class="main-content">
+            <div class="balance">
+                <h2></h2>
+            </div>
+        </span>
+    </div>
 
 
 
